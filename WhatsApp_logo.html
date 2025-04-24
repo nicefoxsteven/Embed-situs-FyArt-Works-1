@@ -8,21 +8,28 @@
       margin: 0;
       padding: 0;
       background: transparent;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Hindari scrollbar */
     }
 
-    /* Kamu bisa tempatkan ini di posisi mana saja */
     .logo-wrapper {
-      padding: 1rem;
       width: 100%;
-      max-width: 200px; /* batas maksimal ukuran */
+      max-width: 200px;
+      aspect-ratio: 1 / 1;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      overflow: hidden;
     }
 
     .logo-container {
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: 100%;
       animation: logoIn 1.5s ease forwards;
       cursor: pointer;
-      transition: transform 0.4s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo {
@@ -33,8 +40,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-sizing: border-box;
     }
 
     .logo img {
@@ -45,16 +53,16 @@
     }
 
     .logo-container:hover .logo {
-      transform: rotate(8deg) scale(1.1);
-      box-shadow: 0 0 30px rgba(37, 211, 102, 0.8), 0 0 60px rgba(37, 211, 102, 0.4);
+      transform: rotate(8deg) scale(1.05);
+      box-shadow: 0 0 12px rgba(37, 211, 102, 0.6), 0 0 18px rgba(37, 211, 102, 0.3);
     }
 
     @keyframes logoIn {
-      0% {
+      from {
         transform: scale(0);
         opacity: 0;
       }
-      100% {
+      to {
         transform: scale(1);
         opacity: 1;
       }
@@ -63,11 +71,10 @@
 </head>
 <body>
 
-<!-- Bisa kamu tempatkan di header, footer, atau sudut halaman -->
 <div class="logo-wrapper">
   <div class="logo-container">
     <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo WhatsApp">
     </div>
   </div>
 </div>
