@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Animated Transparent Logo</title>
+  <title>WhatsApp_logo.html</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       background: transparent;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+
+    /* Kamu bisa tempatkan ini di posisi mana saja */
+    .logo-wrapper {
+      padding: 1rem;
+      width: 100%;
+      max-width: 200px; /* batas maksimal ukuran */
     }
 
     .logo-container {
-      width: 120px;
-      height: 120px;
+      width: 100%;
+      aspect-ratio: 1 / 1;
       animation: logoIn 1.5s ease forwards;
       cursor: pointer;
       transition: transform 0.4s ease;
@@ -26,7 +29,7 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      background: rgba(37, 211, 102, 0.8); /* Semi-transparan hijau */
+      background: rgba(37, 211, 102, 0.8);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -60,9 +63,12 @@
 </head>
 <body>
 
-<div class="logo-container">
-  <div class="logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<!-- Bisa kamu tempatkan di header, footer, atau sudut halaman -->
+<div class="logo-wrapper">
+  <div class="logo-container">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo">
+    </div>
   </div>
 </div>
 
