@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Carousel</title>
+  <title>Carrousel_portofolio.html</title>
   <style>
     html, body {
       margin: 0;
@@ -108,11 +108,11 @@
     slides.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
-  // Auto-scroll every 5 seconds
+  // Auto-scroll every 3 seconds
   setInterval(() => {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlide();
-  }, 5000);
+  }, 3000);
 </script>
 
 </body>
