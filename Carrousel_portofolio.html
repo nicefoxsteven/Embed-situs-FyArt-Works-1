@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Carousel</title>
+  <title>Carrousel_portofolio.html</title>
   <style>
     html, body {
       margin: 0;
@@ -37,8 +37,6 @@
       flex-shrink: 0;
       width: 100%;
       height: 100%;
-      box-sizing: border-box;
-      padding: 0 3rem; /* Padding sisi untuk beri ruang tombol */
     }
 
     .slide img {
@@ -46,7 +44,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 8px;
     }
 
     .nav {
@@ -57,12 +54,12 @@
       display: flex;
       justify-content: space-between;
       transform: translateY(-50%);
-      pointer-events: none;
+      z-index: 10;
       padding: 0 1rem;
+      box-sizing: border-box;
     }
 
     .nav button {
-      pointer-events: all;
       background: rgba(0, 0, 0, 0.6);
       border: none;
       color: white;
@@ -76,21 +73,21 @@
       align-items: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: background 0.3s;
+      pointer-events: all;
     }
 
     .nav button:hover {
       background: rgba(0, 0, 0, 0.8);
     }
-
   </style>
 </head>
 <body>
 
 <div class="carousel">
   <div class="slides">
+    <div class="slide"><img src="https://i.postimg.cc/7P1k25Fb/Rock-The-Cat-PP-Elbe-Frayoga-Donation-service.png"></div>
     <div class="slide"><img src="https://i.postimg.cc/VvFPQhqX/PP-Bang-proto-Donation-service.png"></div>
     <div class="slide"><img src="https://i.postimg.cc/MKW8bWw5/PP-kak-hafkunah-Donation-service.png"></div>
-    <div class="slide"><img src="https://i.postimg.cc/7P1k25Fb/Rock-The-Cat-PP-Elbe-Frayoga-Donation-service.png"></div>
   </div>
   <div class="nav">
     <button onclick="moveSlide(-1)">‹</button>
